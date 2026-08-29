@@ -1,0 +1,8 @@
+name: musdb18
+root: ${oc.env:MUSDB18_ROOT,/data/datasets/musdb18hq}
+sample_rate: 44100
+splits:
+  train: train          # 100 songs
+  test:  test           #  50 songs
+stems: [drums, bass, vocals, other]
+include_mixture: false  # we generate our own mix from the 4 stems

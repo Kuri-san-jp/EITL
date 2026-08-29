@@ -1,0 +1,8 @@
+# Available DSP scopes and the resolutions they target.
+scopes:
+  static:    [global]
+  section:   [section]
+  dynamic:   [global, short_term]
+  transient: [momentary]
+  automation: [section, short_term]
+  master:    [global, momentary]

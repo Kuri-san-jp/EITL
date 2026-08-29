@@ -1,0 +1,7 @@
+name: cambridge_mt
+# Download from https://cambridge-mt.com/ms-mtk.htm — one ZIP per song.
+# Extract each into a sub-dir named after the song; e.g.
+#   $CAMBRIDGE_MT_ROOT/Carlos_Gonzalez_AStrangeRelief/<stem>.wav
+root: ${oc.env:CAMBRIDGE_MT_ROOT,/data/datasets/cambridge_mt}
+sample_rate: 44100
+license: "Free for non-commercial mixing practice (per Mike Senior)"

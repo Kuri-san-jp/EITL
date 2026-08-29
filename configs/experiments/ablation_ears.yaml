@@ -1,0 +1,36 @@
+# Ear-tier ablation matrix (E0 .. E7).
+# Each setting names the ears to enable. `tools` lists scopes the LLM may use.
+settings:
+  E0:
+    description: LLM prior only — no perception tools
+    ears: []
+  E1:
+    description: Audiobox alone (single MOS limit)
+    ears: [audiobox]
+  E2:
+    description: All Tier 1 MOS (no detectors)
+    ears: [audiobox, nisqa, utmos, dnsmos, singmos, scoreq]
+  E3:
+    description: T1 + T4 detectors
+    ears: [audiobox, nisqa, utmos, dnsmos, singmos, scoreq, lufs, true_peak, stereo, lra]
+  E4:
+    description: T1 + T4 + T5 task-grounded
+    ears: [audiobox, nisqa, utmos, dnsmos, singmos, scoreq,
+           lufs, true_peak, stereo, lra,
+           vocal_intelligibility, genre, reseparation_sdr]
+  E5:
+    description: E4 + T3 audio-LLM judge
+    ears: [audiobox, nisqa, utmos, dnsmos, singmos, scoreq,
+           lufs, true_peak, stereo, lra,
+           vocal_intelligibility, genre, reseparation_sdr,
+           qwen2_audio_judge]
+  E6:
+    description: E5 + T2 reference-based ears (full ensemble)
+    ears: [audiobox, nisqa, utmos, dnsmos, singmos, scoreq,
+           lufs, true_peak, stereo, lra,
+           vocal_intelligibility, genre, reseparation_sdr,
+           qwen2_audio_judge,
+           visqol, cdpam, clap, mert, fad]
+  E7:
+    description: LLM-adaptive (dynamic selection from full ensemble)
+    ears: ALL

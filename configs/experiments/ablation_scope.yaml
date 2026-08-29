@@ -1,0 +1,18 @@
+# Action-scope ablation (S0 .. S4).
+# scopes = allowed tool scopes from configs/dsp/scopes.yaml.
+settings:
+  S0:
+    description: static only (mimics most prior work)
+    scopes: [static, master, perception, state]
+  S1:
+    description: + section
+    scopes: [static, master, section, perception, state]
+  S2:
+    description: + dynamic (dynamic EQ / multiband / sidechain)
+    scopes: [static, master, section, dynamic, perception, state]
+  S3:
+    description: + transient (sub-100ms control)
+    scopes: [static, master, section, dynamic, transient, perception, state]
+  S4:
+    description: all scopes including automation
+    scopes: [static, master, section, dynamic, transient, automation, perception, state]

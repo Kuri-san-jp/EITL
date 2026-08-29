@@ -1,0 +1,10 @@
+# Thresholds for src/mix_orchestrator/data/song_tier.py
+# Tune these against a small labelled set (~10 songs hand-rated A/B/C) before
+# applying them to the full MedleyDB split.
+# Defaults tuned for 60-second centered excerpts with silence-floor
+# filtering (see song_tier.classify(excerpt_sec=60)).
+n_stems_easy_max: 4         # MUSDB18-HQ always has 4 stems, so we allow up to 4 as "easy"
+n_stems_hard_min: 5         # any >4-stem song is candidate for "hard"
+dyn_range_db_low: 6.0       # below this on 60-sec excerpt = easy
+dyn_range_db_high: 12.0     # at/above this = hard candidate
+masking_overlap_db_high: -3.0

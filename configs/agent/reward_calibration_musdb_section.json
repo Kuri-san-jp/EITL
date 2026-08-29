@@ -1,0 +1,24 @@
+{
+ "_comment": "Measured z-score constants over the MUSDB section-clip population (n_songs=8, n_sections=25, dur=60.0 s, loudness-normalised per section).",
+ "_n_sections": 25,
+ "audiobox.PQ": {
+  "mean": 6.726,
+  "std": 0.8716,
+  "n": 25
+ },
+ "audiobox.CU": {
+  "mean": 6.6436,
+  "std": 0.76,
+  "n": 25
+ },
+ "audiobox.CE": {
+  "mean": 6.2102,
+  "std": 0.9239,
+  "n": 25
+ },
+ "stereo.stereo_quality": {
+  "mean": 0.9729,
+  "std": 0.0609,
+  "n": 25
+ }
+}

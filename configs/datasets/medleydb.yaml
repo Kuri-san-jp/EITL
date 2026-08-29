@@ -1,0 +1,8 @@
+name: medleydb
+root: ${oc.env:MEDLEYDB_ROOT,/data/medleydb}
+sample_rate: 44100
+splits:
+  train: 0.70
+  dev:   0.15
+  test:  0.15
+stratify_by: genre

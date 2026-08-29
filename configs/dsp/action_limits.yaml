@@ -1,0 +1,49 @@
+# Safe parameter ranges enforced before any DSP action is applied.
+# Modes: research (conservative), unsafe (wider — paper-style stress test)
+mode: research
+
+static_eq:
+  freq:    [20, 20000]
+  gain_db: [-6, 6]      # research; unsafe: [-12, 12]
+  q:       [0.1, 10]
+
+static_compressor:
+  threshold_db: [-60, 0]
+  ratio:        [1.0, 6.0]   # research; unsafe: 20.0
+  attack_ms:    [0.1, 200]
+  release_ms:   [1, 5000]
+  knee_db:      [0, 18]
+
+static_gain:
+  gain_db: [-18, 12]
+
+static_pan:
+  pan: [-1.0, 1.0]
+
+static_width:
+  width: [0.0, 2.0]
+
+section_gain:
+  gain_db: [-12, 12]
+  crossfade_ms: 200
+
+section_eq:
+  freq: [20, 20000]
+  gain_db: [-6, 6]
+  q: [0.1, 10]
+  crossfade_ms: 200
+
+master_eq:
+  freq: [20, 20000]
+  gain_db: [-3, 3]
+  q: [0.1, 10]
+
+master_compressor:
+  threshold_db: [-30, 0]
+  ratio:        [1.0, 4.0]
+  attack_ms:    [1, 100]
+  release_ms:   [50, 1000]
+
+master_limiter:
+  ceiling_db:  [-3, -0.3]
+  release_ms:  [50, 500]

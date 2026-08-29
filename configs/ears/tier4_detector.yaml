@@ -1,0 +1,14 @@
+# Tier 4: cheap deterministic detectors (always-on)
+ears:
+  - name: lufs
+    enabled: true
+    module: mix_orchestrator.ears.tier4_detector.loudness.LoudnessDetector
+  - name: true_peak
+    enabled: true
+    module: mix_orchestrator.ears.tier4_detector.true_peak.TruePeakDetector
+  - name: stereo
+    enabled: true
+    module: mix_orchestrator.ears.tier4_detector.stereo.StereoCorrelationDetector
+  - name: lra
+    enabled: true
+    module: mix_orchestrator.ears.tier4_detector.lra_dynamics.LRADetector

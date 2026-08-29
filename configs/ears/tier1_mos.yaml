@@ -1,0 +1,15 @@
+# Tier 1: no-reference MOS predictors
+ears:
+  - name: audiobox
+    enabled: true
+    module: mix_orchestrator.ears.tier1_mos.audiobox.AudioboxEar
+    weights: facebook/audiobox-aesthetics
+  - name: lufs
+    enabled: true
+    module: mix_orchestrator.ears.tier4_detector.loudness.LoudnessDetector
+  - name: true_peak
+    enabled: true
+    module: mix_orchestrator.ears.tier4_detector.true_peak.TruePeakDetector
+  - name: stereo
+    enabled: true
+    module: mix_orchestrator.ears.tier4_detector.stereo.StereoCorrelationDetector

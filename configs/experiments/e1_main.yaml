@@ -1,0 +1,27 @@
+# E1: main R×S 2x2 ablation (β-plan core experiment).
+# Demonstrates that BOTH multi-resolution AND multi-scope are necessary.
+cells:
+  R0_S0:
+    description: "global only / static+master only — most prior-work-like"
+    resolutions: [global]
+    scopes:      [static, master, perception, state]
+  R4_S0:
+    description: "multi-resolution observation, but static-only actions"
+    resolutions: [global, section, short_term, momentary]
+    scopes:      [static, master, perception, state]
+  R0_S4:
+    description: "global-only observation, but full action scope"
+    resolutions: [global]
+    scopes:      [static, master, section, dynamic, transient, automation, perception, state]
+  R4_S4:
+    description: "full multi-resolution + full multi-scope — ours"
+    resolutions: [global, section, short_term, momentary]
+    scopes:      [static, master, section, dynamic, transient, automation, perception, state]
+
+# Run-grid for the ICASSP main result.
+songs: 30          # MedleyDB test split (use synthetic for smoke)
+seeds: [42, 43, 44, 45, 46]
+max_iters: 30
+duration_sec: 60   # 1-min excerpts (mid-song)
+target_lufs: -14.0
+budget_usd_per_run: 2.0

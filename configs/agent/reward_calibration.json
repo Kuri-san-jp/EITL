@@ -1,0 +1,19 @@
+{
+ "_comment": "Per-ear z-score normalisation constants, computed from the 294 variants (6 songs x 49) of explore_mixing_v1 . Replaces the earlier 1/std calibration, which broke down. aggregate() z-scores with these mean/std values before weighting.",
+ "audiobox.PQ": {
+  "mean": 7.7538,
+  "std": 0.5352
+ },
+ "audiobox.CU": {
+  "mean": 7.5989,
+  "std": 0.354
+ },
+ "audiobox.CE": {
+  "mean": 7.3938,
+  "std": 0.3741
+ },
+ "stereo.stereo_quality": {
+  "mean": 0.8088,
+  "std": 0.1917
+ }
+}

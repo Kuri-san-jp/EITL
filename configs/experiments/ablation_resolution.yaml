@@ -1,0 +1,17 @@
+# Temporal-resolution ablation (R0 .. R4).
+settings:
+  R0:
+    description: global only
+    resolutions: [global]
+  R1:
+    description: + section
+    resolutions: [global, section]
+  R2:
+    description: + short_term
+    resolutions: [global, section, short_term]
+  R3:
+    description: + momentary
+    resolutions: [global, section, momentary]
+  R4:
+    description: full multi-resolution
+    resolutions: [global, section, short_term, momentary]

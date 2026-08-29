@@ -1,0 +1,6 @@
+backend: openai
+model: gpt-4o-
+temperature: 0.0
+max_tokens: 4096
+system_prompt_path: configs/agent/prompts/system_prompt.txt
+iteration_prompt_path: configs/agent/prompts/iteration_prompt.j2

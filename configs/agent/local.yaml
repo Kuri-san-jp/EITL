@@ -1,0 +1,9 @@
+backend: local
+base_url: ${oc.env:LOCAL_LLM_URL,http://127.0.0.1:1234/v1}
+model:    ${oc.env:LOCAL_LLM_MODEL,default}
+temperature: 0.0
+max_tokens: 4096
+system_prompt_path: configs/agent/prompts/system_prompt.txt
+iteration_prompt_path: configs/agent/prompts/iteration_prompt.j2
+# Tool-use uses OpenAI function-tool format (auto-converted from the
+# Anthropic spec in tools/schemas.py).

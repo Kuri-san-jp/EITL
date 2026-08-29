@@ -1,0 +1,18 @@
+# Minimal smoke test — no API key required (uses mock LLM)
+defaults:
+  - main
+  - _self_
+
+run_name: smoke
+max_iterations: 3
+target_lufs: -14.0
+
+agent:
+  backend: mock          # deterministic scripted "LLM"
+
+dataset:
+  name: synthetic        # synth drums/bass/vocal sine tones, 6 sec each
+
+wandb:
+  enabled: false
+  mode: disabled
