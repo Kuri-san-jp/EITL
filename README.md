@@ -1,11 +1,11 @@
 # EITL: Ear-in-the-Loop Music Mixing
 
-Code for the ICASSP 2027 submission *"EITL: Ear-in-the-Loop Music Mixing
-Measures and Mitigates Reward Hacking of Learned Quality Metrics."*
+Code for the ICASSP 2027 submission *"EITL: Ear-in-the-Loop Mixing
+Optimisation with Music-Generation Quality Models and Reward-Hacking
+Mitigation."*
 
-Anonymised for double-anonymous review. Author names, affiliations, absolute
-paths, and the listening-study operational material (completion codes,
-screening answer keys, platform tokens) are removed.
+Operational material from the listening study (completion codes, screening
+answer keys, platform tokens) is removed. Absolute paths are anonymised.
 
 ## What this is
 
